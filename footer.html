@@ -1,0 +1,203 @@
+<footer class="bg-dark text-center text-white" @isset($lang)@if($lang=="ar" ) dir={{$lang}} @endif @endisset>
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i
+        ></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i
+        ></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fab fa-google"></i
+        ></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/ya_ga_chi/" role="button"><i class="fab fa-instagram"></i
+        ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://codepen.io/zenku" role="button"><i class="fab fa-codepen"></i
+        ></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/YA-GA-HI" role="button"><i class="fab fa-github"></i
+        ></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        @auth
+        <section class="">
+            @if ($message = Session::get('message'))
+            <div class="alert  alert-block bg-success">
+                <strong class="text-white"><h6>{{ $message }}</h6></strong>
+            </div>
+            @endif
+            <form method="POST" action="{{route('email')}}">
+                @csrf
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                    <!--Grid column-->
+                    <div class="col-auto">
+                        <p class="pt-2">
+                            <strong>Send Email:
+                                </strong>
+                        </p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-5 col-12">
+                        <!-- Email input -->
+                        <div class="form-outline form-white mb-4">
+                            <input style="padding-left: 10px ;" type="text" name="content" placeholder="Content" class="form-control text-left" /> {{-- <label class="form-label" for="form5Example2">Email address</label> --}}
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-outline-light mb-4">
+                Send
+              </button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </form>
+            @endauth @guest
+            <section class="">
+                <form>
+
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Send Email:
+                                            </strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input style="padding-left: 5xp ;" type="text" name="content" placeholder="Content" class="form-control text-left" /> {{-- <label class="form-label" for="form5Example2">Email address</label> --}}
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button class="btn btn-outline-light mb-4">
+                            <a href="{{route('register')}}" class=" btn-outline-light text-decoration-none">Send</a>
+                          </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+                @endguest
+
+
+
+
+
+                <!--Grid column-->
+
+                <!--Grid column-->
+
+
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <q> To me, mathematics , programming , and the arts are insanely related. They’re all creative expressions.
+                </q>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class=" text-uppercase ">
+                            <ul class="list-unstyled mb-0 ">
+                                <li>
+                                    <a href="{{route('Blog')}} ">Courses</a>
+                                </li>
+                            </ul>
+                        </h5>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ">
+                        <h5 class="text-uppercase ">
+                            <ul class="list-unstyled mb-0 ">
+                                <li>
+                                    <a href="{{route('Blog')}}">Blog</a>
+                                </li>
+                            </ul>
+                        </h5>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ">
+                        <h5 class="text-uppercase ">Tools</h5>
+
+                        <ul class="list-unstyled mb-0 ">
+                            <li>
+                                <a href="{{route(" Fdegeq ")}}">1St deg machine</a>
+                            </li>
+                            <li>
+                                <a href="{{route(" Sdegeq ")}}">2nd deg machine</a>
+                            </li>
+                            <li>
+                                <a href="">Other</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class=" col-lg-3 col-md-6 mb-4 mb-md-0 ">
+                        <h5 class="text-uppercase ">Other</h5>
+
+                        <ul class="list-unstyled mb-0 ">
+                            <li>
+                                <a href="#! ">Donate</a>
+                            </li>
+                            <li>
+                                <a href="#! ">Email</a>
+                            </li>
+                            <li>
+                                <a href="#! ">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#!">about</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class=" text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2); ">
+        © 2021 Copyright : Designed & Developed With
+        <i class="fas fa-heart " style="color: #F7564A; "></i> By
+        <a class="text-white " href="#"> Zenku </a>
+    </div>
+    <!-- Copyright -->
+</footer>
